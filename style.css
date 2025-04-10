@@ -1,20 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 :root {
-    --width: min(600px, 95vw, 95vh)
-}
-
-html {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    --width: min(600px, 92vw)
 }
 
 body {
     background-color: black;
     color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     font-family: "Rubik", sans-serif;
+}
+
+@media (max-width: 48rem) {
+    body {
+        flex-direction: column;
+    }
 }
 
 .container {
@@ -22,7 +24,7 @@ body {
     background-color: black;
     border: 3px solid grey;
     border-radius: 12px;
-
+    margin: 8px;
     display: flex;
     flex-direction: column;
 }
@@ -70,4 +72,44 @@ body {
 
 .btn.blendin {
     background-color: #99999940;
+}
+
+.title {
+    margin: 16px;
+}
+
+.entry {
+    background-color: #99999940;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+#history {
+    max-height: 97vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+#history::-webkit-scrollbar {
+    display: none;
+}
+
+.history-query {
+    font-size: calc(var(--width) * 0.03);
+    color: #999999;
+}
+
+.history-result {
+    font-size: calc(var(--width) * 0.06);
+    color: #ffffff;
+}
+
+.clearbtn {
+    background-color: orange;
+    font-size: 1.5rem;
+    border-radius: 12px;
+    margin: 8px;
+    padding: 8px;
 }
