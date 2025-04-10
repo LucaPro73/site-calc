@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 :root {
-    --width: min(600px, 90vw)
+    --width: min(600px, 95vw, 95vh)
 }
 
 html {
@@ -29,6 +29,9 @@ body {
 
 .input {
     font-size: calc(var(--width) * 0.11);
+    display: flex;
+    justify-content: flex-end;
+    white-space: nowrap;
     overflow: hidden;
     height: calc(var(--width) * 0.133);
     margin: 8px;
